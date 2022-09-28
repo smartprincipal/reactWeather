@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ 
+ body{
+  background: #1B262C;
+ }
+ header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 15px;
+ }
+ .logo{
   color: white;
-}
+  font-size:25px;
+  font-weight: 900px;
+  text-decoration: none;
+ }
+ .hamburger{
+  display: none;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+ }
+ .close{
+  display: none;
+  color: #fff;
+  font-size: 70px;
+  font-weight: bolder;
+  position: absolute;
+  right: -50px;
+  cursor: pointer;
+ }
+ .navbar{
+  display: flex;
+ }
+ .menu{
+  display: flex;
+  align-items: center;
+ }
+ .menu li{
+  list-style-type: none;
+ }
+ .menu a{
+  padding-right: 50px;
+  text-decoration: none;
+  color: #fff;
+ }
+ .btn1{
+  background: linear-gradient(108.5deg, #3A5E72 4.95%, #5C93B1 132.43%);
+ box-shadow: inset 7px 7px 10px rgba(79, 136, 167, 0.3);
+ border-radius: 20px;
+ height: 68px;
+ width: 165px;
+ color: #fff;
+ font-size: 24px;
+ border: none;
+ cursor: pointer;
+ }
+ .content1{
+  color: #FFFFFF;
+  width: 700px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  line-height: 65px;
+  margin-top: 50px;
+ }
+ .content1a{
+  color:rgba(120, 207, 255, 1);
+  text-decoration: none;
+ }
+ .searchRow{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+ }
+ #countryState{
+  background: #24343D;
+ box-shadow: inset 10px 10px 30px rgba(36, 52, 61, 0.6);
+ border: none;
+ width: 358px;
+ height: 80px;
+ border-radius: 12px;
+ color: #fff;
+ font-size: 24px;
+ padding-left: 20px;
+ }
+ #countryState::placeholder{
+  color: #fff;
+  Padding: 30px;
+  font-size: 20px;
+  
+ }
+ .weatherBox{
+  display: flex;
+  /* width: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+ }
+ .borderBox{
+  width: 355px;
+  height: 486px;
+  margin-top: 61.46px;
+  background: #24353E;
+ box-shadow: 10px 9px 70px rgba(36, 53, 62, 0.4);
+ border-radius: 20px;
+  
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .sunnyImage{
+  position: relative;
+  /* top: -315px; */
+  left: 140px;
+ }
+ .details{
+  color: #fff;
+  position: relative ;
+  top: 150px;
+  line-height: 65px;
+  padding-left: 70px;
+  font-weight: 300px;
+  font-size: 40px;
+ }
+ .wind{
+  font-size: 25px;
+  /* line-height: 65px; */
+ }
+ 
+ /* Mobile screen max-width 360px */
+ @media screen and (max-width: 800px) {
+  header{
+   margin-left: 1rem;
+   justify-content: flex-start;
+  }
+  .logo{
+   margin-left: 0px;
+  }
+  .hamburger{
+   display: block;
+  }
+  .close{
+   position: absolute;
+   top: 20px;
+   right: 20px;
+  }
+  .menu{
+   display:none;
+   height: 110vh;
+   position: relative;
+   top: 25px;
+   width: 300px;
+   /* justify-content: center; */
+   /* align-content: center; */
+  }
+  .menu-drop li{
+   margin-top: 50px;
+   list-style-type: none;
+   /* position: absolute; */
+   /* top: 10px; */
+   /* justify-content: center; */
+  }
+  .menu-drop a{
+   margin-left: -30px;
+   color: #fff;
+  }
+  .navbar{
+   margin-top: 40px;
+  }
+ 
+ 
+  .show-menu{
+   display: block;
+  }
+ .btn1{
+  display: none;
+ }
+ .show-close {
+  display: block;
+ }
+ .deactive {
+ display: none;
+ }
+ .content1{
+  width: 300px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 55px;
+ }
+ #countryState{
+  background: #24343D;
+ box-shadow: inset 10px 10px 30px rgba(36, 52, 61, 0.6);
+ border: none;
+ width: 310px;
+ height: 80px;
+ border-radius: 12px;
+ color: #fff;
+ font-size: 24px;
+ padding-left: 20px;
+ }
+ .border{
+  width: 310px;
+  border: 2px solid gold;
+ }
+ .details{
+  padding-left: 40px;
+ }
+ .sunnyImage{
+  left: 40px;
+ }
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
